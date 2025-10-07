@@ -1,80 +1,92 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-Hant">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Just a boring page!</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <style>
-        body {
-            background-color: rgb(13, 0, 38);
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* 垂直置中 */
-            align-items: center;     /* 水平置中 */
-            height: 100vh;
-            margin: 0;
-        }
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Just a boring page!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: rgb(13, 0, 38);
+      --btn: #2e003e;
+      --btn-hover: #3e0050;
+      --text: #bc8d8d;
+      --btn-text: #e0bebe;
+    }
 
-        p {
-            color: #bc8d8d;
-            font-size: 30px;
-            text-align: center;
-        }
+    * { box-sizing: border-box; }
 
-        .button-container {
-            margin-top: 25px;
-        }
+    body {
+      background-color: var(--bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* 垂直置中 */
+      align-items: center;     /* 水平置中 */
+      min-height: 100vh;
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+    }
 
-        button {
-            background-color: #2e003e;
-            color: #e0bebe;
-            font-size: 22px;           /* 放大字體 */
-            padding: 15px 25px;        /* 增加內距 */
-            margin: 10px;
-            border: none;
-            border-radius: 10px;       /* 圓角 */
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(255, 192, 203, 0.2);
-            transition: all 0.2s ease-in-out;
-        }
+    p {
+      color: var(--text);
+      font-size: 30px;
+      text-align: center;
+      margin: 0;
+    }
 
-        button:hover {
-            background-color: #3e0050;
-            transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(255, 192, 203, 0.3);
-        }
+    .button-container {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-        button:active {
-            transform: scale(0.98);
-        }
-    </style>
+    button {
+      background-color: var(--btn);
+      color: var(--btn-text);
+      font-size: 22px;           /* 放大字體 */
+      padding: 15px 25px;        /* 增加內距 */
+      margin: 10px;
+      border: none;
+      border-radius: 10px;       /* 圓角 */
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(255, 192, 203, 0.2);
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: var(--btn-hover);
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(255, 192, 203, 0.3);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    #ThisIsYourGoal {
+      opacity: 0.01;
+      user-select: none;
+    }
+  </style>
 </head>
-
 <body>
-    <b>
-        <p>You can't FIND me!</p>
-    </b>
-    <div class="button-container">
-        <button onclick="alert('Hello my friend :D')">1</button>
-        <button onclick="alert('Can you find the something hidden in this page?')">2</button>
-        <button onclick="alert('Do u want some hints?')">3</button>
-        <button onclick="alert('F12(mac)-> command+option+i')">4</button>
-        <button onclick="alert('F12(windows)-> control+shift+i')">5</button>
-        <button onclick="alert('Base64 is your friend')">6</button>
-        <button onclick="alert('Is it not enough?')">7</button>
-        <button onclick="alert('Vigenere to Base64 ?')">8</button>
-        <button onclick="alert('key=success')">9</button>
-        <button onclick="alert('good luck!')">10</button>
-    </div>
+  <p><strong>You can't FIND me!</strong></p>
+
+  <div class="button-container">
+    <button onclick="alert('Hello my friend :D')">1</button>
+    <button onclick="alert('Can you find the something hidden in this page?')">2</button>
+    <button onclick="alert('Do u want some hints?')">3</button>
+    <button onclick="alert('F12(mac)-> command+option+i')">4</button>
+    <button onclick="alert('F12(windows)-> control+shift+i')">5</button>
+    <button onclick="alert('Base64 is your friend')">6</button>
+    <button onclick="alert('Is it not enough?')">7</button>
+    <button onclick="alert('Vigenere to Base64 ?')">8</button>
+    <button onclick="alert('key=success')">9</button>
+    <button onclick="alert('good luck!')">10</button>
+  </div>
+
+  <p id="ThisIsYourGoal" aria-hidden="true" style="opacity:0.01;">RgzjD3laQRPnRbJxwo90OXFxRdGajI==</p>
+
 </body>
-
-</html>
-     <div>
-         <p id="ThisIsYourGoal!!" style="opacity: 0.01;">RgzjD3laQRPnRbJxwo90OXFxRdGajI==</p>
-    </div>
-</body>
-
-
 </html>
